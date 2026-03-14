@@ -5,6 +5,7 @@ import  {userController}  from './controller.js';
 userRouter
 .post('/user',userController.createOne)
 .get('/user',userController.showOne)
+.delete('/user',userController.protect,userController.deleteUser)
 
 
 userRouter
