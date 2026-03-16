@@ -11,6 +11,9 @@ userRouter
 userRouter
 .get('/user/login',userController.findOneAndLogin);
 
+userRouter
+.post('/user/logOut', userController.protect,userController.logOut)
+
 
 userRouter.get('/users',userController.showAll)
 

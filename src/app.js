@@ -1,5 +1,6 @@
 import express from 'express';
-import userRouter from './apps/users/api.js'
+import userRouter from './apps/users/api.js';
+import taskRouter from './apps/tasks/api.js';
 import globalError from './apps/utils/globalError.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
@@ -26,6 +27,8 @@ if(process.env.NODE_ENV==='production'){
 
 
 app.use('/api/v1',userRouter);
+app.use('/api/v1',taskRouter);
+
 
 
 
